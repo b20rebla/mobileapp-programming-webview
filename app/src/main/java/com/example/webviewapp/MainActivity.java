@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        WebView myWebView = findViewById(R.id.my_webview);
+        WebView myWebView = (WebView) findViewById(R.id.my_webview);
+        myWebView.loadUrl("https://www.his.se");
 
 
         /*
