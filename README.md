@@ -1,9 +1,34 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+De ändringar som jag bland annat har gjort är att jag ändrade namnet på appen till MyWebViewApp vilket gjordes i strings.xml, samt att jag lade till så att
+appen fick tillgång till internet med hjälp av den ena koden som visas här nedanför.
 
-_Du kan ta bort all text som finns sedan tidigare_.
+```
+<string name="app_name">MyWebViewApp</string>
+```
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+Vid skapandet av loka webbsida så gjordes först en mapp (assets) där den lokala sidan skulle finnas tillgänglig. För att den skulle fungera så fick denna URL
+läggas till file:///android_asset/about.html. Det som visas i de båda koderna här nedanför är att den lokala filen måste finnas med i både public void och i
+if satsen för att den lokala sidan ska kunna visas, samma sak gäller för den externa sidan.
+
+```
+public void showInternalWebPage(){
+        // TODO: Add your code for showing internal web page here
+        myWebView.loadUrl("file:///android_asset/about.html");
+    }
+```
+```
+if (id == R.id.action_internal_web) {
+            Log.d("==>","Will display internal web page");
+            showInternalWebPage();
+            return true;
+        }
+```
+
 
 ## Följande grundsyn gäller dugga-svar:
 
@@ -33,7 +58,8 @@ function errorCallback(error) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](android.png)
+![](bild1.png)
+![](bild2.png)
 
 Läs gärna:
 

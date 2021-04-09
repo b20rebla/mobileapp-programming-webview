@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
         myWebView.loadUrl("file:///android_asset/about.html");
-
     }
 
     @Override

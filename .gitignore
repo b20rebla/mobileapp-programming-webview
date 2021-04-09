@@ -39,4 +39,6 @@ captures/
 .DS_Store
 
 # Other
+/.idea/*
 *.zip
+
